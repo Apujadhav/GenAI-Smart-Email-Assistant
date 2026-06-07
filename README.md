@@ -1,101 +1,130 @@
-## 📩 Smart Email Assistant – AI-Powered Email Management
+# 📩 GenAI Smart Email Assistant – AI-Powered Email Management
 
+**An AI-powered email assistant built using Java, Spring Boot, Spring AI, Gemini AI, React, and Chrome Extension integration for intelligent email automation and smart response generation.**
 
-**An AI-driven email assistant built using Spring Boot & Spring AI, integrated with a Chrome Extension for seamless email automation and smart suggestions.**
+---
 
 ## 🔥 Key Features
-✅ **AI-Powered Email Suggestions** – Uses **Spring AI** to generate smart email replies.  
-✅ **Context-Aware Responses** – Understands email context for better automation.  
-✅ **Seamless Chrome Extension** – Provides AI-powered suggestions directly inside Gmail.  
-✅ **Email tone customization** - Profesional, casual, formal, etc,  
-✅ **Efficient Email Categorization** – Helps prioritize emails using AI.  
-✅ **Secure & Scalable Backend** – Built using **Spring Boot, Spring AI, and REST APIs**.  
+
+✅ **AI-Powered Email Suggestions** – Generates intelligent email replies using Gemini AI.
+
+✅ **Context-Aware Responses** – Understands email content and generates relevant responses.
+
+✅ **Seamless Chrome Extension Integration** – Provides AI-powered suggestions directly inside Gmail.
+
+✅ **Email Tone Customization** – Generate responses in Professional, Casual, Formal, and Friendly tones.
+
+✅ **Real-Time Response Generation** – Helps users draft emails quickly and efficiently.
+
+✅ **Secure & Scalable Backend** – Built using Spring Boot, Spring AI, and REST APIs.
 
 ---
 
 ## 🛠️ Tech Stack
-### **Backend (Spring Boot + AI)**
-- **Spring Boot 3** – REST API Development  
-- **Spring AI** – AI-powered email response generation  
-- **OpenAI/GPT Integration** – For intelligent email drafting  
 
+### Backend (Spring Boot + AI)
 
-### **Frontend (Chrome Extension)**
-- **HTML, CSS, JavaScript** – Chrome extension UI  
-- **Manifest v3** – Secure and modern extension development  
-- **JavaScript Content Script & Background Script** – Handles AI suggestions in Gmail  
+* Java 17
+* Spring Boot 3
+* Spring AI
+* Gemini AI API
+* REST APIs
+* Maven
+
+### Frontend
+
+* React.js
+* HTML
+* CSS
+* JavaScript
+
+### Chrome Extension
+
+* Manifest V3
+* Content Scripts
+* Background Scripts
 
 ---
 
 ## 🎯 How It Works
-1️⃣ The **Chrome Extension** injects an AI-powered assistant inside Gmail.  
-2️⃣ When composing an email, the assistant **suggests responses** based on context.  
-3️⃣ The extension **sends the email content** to the Spring Boot backend.  
-4️⃣ The **Spring AI-powered backend** generates smart responses.  
-5️⃣ The extension displays **AI-generated replies**, helping users craft emails faster.  
+
+1️⃣ The Chrome Extension injects an AI-powered assistant inside Gmail.
+
+2️⃣ When composing an email, the assistant generates smart responses based on email context.
+
+3️⃣ The extension sends the email content to the Spring Boot backend.
+
+4️⃣ The backend communicates with Gemini AI using REST APIs.
+
+5️⃣ The AI-generated response is returned and displayed directly inside Gmail.
 
 ---
 
-## 🚀 Installation & Setup  
+## 🚀 Installation & Setup
 
-### 🏗️ **Backend – Spring Boot AI Server**  
-#### **1️⃣ Clone the Repository**  
+### Backend – Spring Boot AI Server
+
+#### Clone the Repository
+
 ```bash
-git clone https://github.com/your-username/Gen-AI-Email-Assistantt.git
-cd Gen-AI-Email-Assistant
-```
-#### **2️⃣ Configure API Keys**  
-- Set up **OpenAI API key** (or any other LLM provider).  
-- Configure **Spring Boot properties** in `application.properties`:  
-```application.properties
-gemini.api.url=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=
-gemini.api.key=<Enter_Your_API_Key>
+git clone https://github.com/Apujadhav/GenAI-Smart-Email-Assistant.git
+cd GenAI-Smart-Email-Assistant
 ```
 
-#### **3️⃣ Run the Application**  
+#### Configure Gemini API Key
+
+Update `application.properties`:
+
+```properties
+gemini.api.url=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=
+gemini.api.key=YOUR_GEMINI_API_KEY
+```
+
+#### Run the Application
+
 ```bash
 ./mvnw spring-boot:run
 ```
-- Backend runs on **`http://localhost:8080`**  
 
----
+Backend runs on:
 
-### 🏗️ **Chrome Extension – Setup & Installation**  
-#### **1️⃣ Clone & Navigate to the Extension Directory**  
-```bash
-cd chrome-extension
+```text
+http://localhost:8080
 ```
 
-#### **2️⃣ Load the Extension in Chrome**  
-1. Open **Chrome** and go to `chrome://extensions/`  
-2. Enable **Developer Mode** (toggle in the top-right).  
-3. Click **"Load unpacked"** and select the `chrome-extension` folder.  
+---
 
-#### **3️⃣ Using the Extension**  
-- Open **Gmail**.  
-- Click on the **Smart Email Assistant** icon inside the compose window.  
-- The AI generates suggested responses instantly! 🚀  
+### Chrome Extension – Setup
+
+1. Open Chrome.
+2. Navigate to `chrome://extensions/`
+3. Enable Developer Mode.
+4. Click **Load Unpacked**.
+5. Select the extension folder.
 
 ---
 
-## 📝 API Endpoints (Backend)  
-| Method | Endpoint | Description |  
-|--------|----------|-------------|  
-| `POST` | `/api/email/generate-reply` | AI-generated email reply |  
+## 📝 API Endpoints
+
+| Method | Endpoint              | Description                       |
+| ------ | --------------------- | --------------------------------- |
+| POST   | `/api/email/generate` | Generate AI-powered email replies |
 
 ---
 
-## 📷 Screenshots  
-*(Add UI screenshots of the Chrome extension and AI-generated emails for better visualization.)*  
+## 🚀 Future Enhancements
+
+* Voice-to-Text Email Drafting 🎙️
+* Multi-Language Support 🌍
+* Smart Email Categorization 📂
+* Response History Tracking 📜
+* Calendar Integration 📅
+* Personalized Writing Styles ✨
 
 ---
 
-## 🤝 Contributing  
-We welcome contributions! Fork the repo, improve features, and submit a PR.  
+## 👨‍💻 Author
 
----
+**Apurva Jadhav**
 
-### 🚀 Want to Enhance This Project?  
-- Add **voice-to-text email dictation** 🎙️  
-- Integrate with **Google Calendar** for smart scheduling 📅  
-- Improve **email tone customization** (casual, formal, etc.) 🎭
+GitHub: https://github.com/Apujadhav
